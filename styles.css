@@ -1,1 +1,69 @@
 /*Maak hier jouw CSS!*/
+.container {
+    background-color: lightgoldenrodyellow;
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px;
+    grid-template-areas:
+        "A"
+        "B"
+        "C"
+        "D"
+        "E"
+        "."
+        "F";
+}
+.item  {
+    background-color: darkred;
+    color: lightgoldenrodyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#item-a {
+    grid-area: A;
+}
+#item-b {
+    grid-area: B;
+    padding: 20px;
+}
+#item-c {
+    grid-area: C;
+}
+#item-d {
+    grid-area: D;
+}
+#item-e {
+    grid-area: E;
+}
+#item-f {
+    grid-area: F;
+    height: 50px;
+}
+
+@media screen and (min-width: 576px) {
+.container {
+    background-color: lightgoldenrodyellow;
+    display: grid;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 190px 100px auto 50px;
+    grid-template-areas:
+        "A C C"
+        "B C C"
+        "B E D"
+        "B E D"
+        "F F F";
+}
+    #item-d {
+        height: 100px;
+ }
+}
+
+
+
